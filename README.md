@@ -22,10 +22,15 @@ A Bash-based Linux administration toolkit that provides a menu-driven interface 
 - Git
 - GitHub
 
-## Project Structure
+## Requirements
 
-```text
-linux-admin-tool/
-├── admin_toolkit.sh
-├── README.md
-└── .gitignore
+- Linux operating system
+- Bash shell
+- sudo privileges
+
+## How to Run
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Siva5752/Linux_admin_toolkit.git
