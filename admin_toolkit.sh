@@ -465,7 +465,11 @@ do
                 case $health_choice in
 
                     1)
+                        echo "Disk  Usage:"
                         df -h
+                        echo
+                        echo "Disk Usage Summary:"
+                        df -h --output=pcent,target | tail -n +2
                         ;;
 
                     2)
