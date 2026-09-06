@@ -414,7 +414,11 @@ do
                         read -p "Enter PID: " pid
 
                         if [[ "$pid" =~ ^[0-9]+$ ]]; then
-                            ps -p "$pid" -f
+                            if ps -p "$pid" > /dev/null; then
+                                ps -p "$pid" -f
+                            else
+                                echo "Process not found"
+                            fi
                         else
                             echo "Invalid PID!"
                         fi
