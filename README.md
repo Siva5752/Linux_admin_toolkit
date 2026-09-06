@@ -34,3 +34,6 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/Siva5752/Linux_admin_toolkit.git
+## File Management
+
+Provides basic file operations such as creating directories, creating files, copying files, moving/renaming files, deleting files, finding files, and changing permissions.
