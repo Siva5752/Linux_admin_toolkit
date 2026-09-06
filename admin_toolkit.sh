@@ -647,7 +647,12 @@ do
                         ;;
 
                     2)
-                        sudo journalctl -p err -n 20 --no-pager
+                        echo "Recent Error Logs:"
+                        if sudo journalctl -p err -n 20 --no-pager | grep -q .; then
+                            sudo journalctl -p err -n 20 --no-pager
+                        else
+                            echo "No error logs found."
+                        fi
                         ;;
 
                     3)
