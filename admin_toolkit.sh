@@ -529,8 +529,10 @@ do
 
                         if [ -z "$target" ]; then
                             echo "Target cannot be empty!"
+                        elif ping -c 1 -W 2 "$target" > /dev/null 2>&1; then
+                            echo "Connectivity successful: $target is reachable."
                         else
-                            ping -c 4 "$target"
+                            echo "Connectivity failed: $target is unreachable."
                         fi
                         ;;
 
