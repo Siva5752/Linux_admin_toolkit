@@ -588,6 +588,8 @@ do
                             echo "Input cannot be empty!"
                         elif [ ! -d "$source" ]; then
                             echo "Directory does not exist!"
+                        elif [ -e "${backup}.tar.gz" ]; then
+                            echo "Backup file already exists!"
                         else
                             tar -czvf "${backup}.tar.gz" "$source"
 
